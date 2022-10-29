@@ -102,7 +102,7 @@ const Raido = ({ value_std }) => {
               </div>
             </li>
           </ul>
-          {error ==  true ?  <div role="alert">
+          {/* {error ==  true ?  <div role="alert">
   <div class="bg-green-500 text-white font-bold rounded-t px-4 py-2">
     your answer is True
   </div>
@@ -113,7 +113,7 @@ const Raido = ({ value_std }) => {
     your answer is False
   </div>
  
-</div> : ''  }
+</div> : ''  } */}
         </div>
         <br />
       </div>
