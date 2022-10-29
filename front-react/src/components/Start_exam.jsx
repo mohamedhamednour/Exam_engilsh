@@ -3,9 +3,10 @@ import Store_context from "./UseContext";
 import { useNavigate } from "react-router-dom";
 
 const Start_exam = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
 
-  const { name, setname } = React.useContext(Store_context);
+  const { name, setname } = React.useContext(Store_context); //import data by stote 
+  // here function get name user
   const onChange = (e) => {
     setname(e.target.value);
     console.log(name);

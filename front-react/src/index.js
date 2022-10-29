@@ -3,12 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Store_x } from "./components/UseContext";
+import { Store_x } from "./components/UseContext"; //store use state 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Exam from "./components/Exam";
 import Start_exam from "./components/Start_exam";
 import Your_rank from './components/Your_rank';
 import Currect_answer from './components/Currect_answer'
+// here i use  base  roure  in app.js and  children all page in parinte app.js by route new version
 const router = createBrowserRouter([
   {
     path: "/",

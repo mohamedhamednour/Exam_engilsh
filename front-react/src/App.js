@@ -5,11 +5,15 @@ import { Outlet } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+      //nav bar fixed
   <NavBar /> 
 <div className='main'>
+{/* Outlet this chage page by route dom   */}
 <Outlet />
 </div>
   <br></br>
+
+
 
     </div>
   );

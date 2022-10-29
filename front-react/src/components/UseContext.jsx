@@ -6,36 +6,37 @@ const Store_context = createContext();
 export default Store_context;
 
 export const Store_x = ({ children }) => {
-  let [counts, setcounts] = useState(0);
-  let [allanswer, setanser] = useState([]);
+  let [counts, setcounts] = useState(0); //counts answer
+  let [allanswer, setanser] = useState([]); //all answer user if you want this 
+  const [end, setend] = useState(0);  //start questions 
 
-  let [rank, setrank] = useState(0);
-  const [name, setname] = useState("");
+  let [rank, setrank] = useState(0); //rank user
+  const [name, setname] = useState(""); //get name user
 
-  console.log("counts is ", typeof counts);
+// function post rank user
   const send_rank = async () => {
     await axios({
       method: "post",
       header: {
-        'Content-Type': 'application/json'
-    },
+        "Content-Type": "application/json",
+      },
       url: "http://localhost:5000/user/apipost",
       data: [counts],
     }).then((response) => {
       console.log("res is ", response.data);
     });
   };
-
+//  get rank user
   const get_rank = async () => {
     try {
       const response = await axios.get("http://localhost:5000/user/rank");
       setrank(response.data);
-      console.log(response.data , 'is :::::::');
+      console.log(response.data, "is :::::::");
     } catch (error) {
       console.error(error);
     }
   };
-
+//  pass data by store 
   let contextData = {
     counts,
     setcounts,
@@ -45,7 +46,9 @@ export const Store_x = ({ children }) => {
     name,
     setname,
     allanswer,
-    setanser
+    setanser,
+    end,
+    setend,
   };
 
   return (

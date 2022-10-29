@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Start_exam = () => {
   const { allanswer } = React.useContext(Store_context);
-  console.log('dddddd' , allanswer)
+
   const navigate = useNavigate();
 
   return (
@@ -17,10 +17,11 @@ const Start_exam = () => {
                     ])
                   : "no data"}
         <button
-          onClick={() => navigate("/")}
           class="bg-transparent  p-1  mt-[10px] mb-[10px] hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
         >
-          agin Exam
+                    <a href={`/exam`}> agin Exam</a>
+
+       
         </button>
       </div>
       <br />
